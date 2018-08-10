@@ -13,6 +13,10 @@ gulp.task('default', function (done) {
     runSequence('env:dev', 'nodemon', done);
 });
 
+gulp.task('debug', function (done) {
+    runSequence('env:dev', 'nodemon-debug', done);
+});
+
 gulp.task('prod', function (done) {
     runSequence('env:prod', 'nodemon', done);
 });
@@ -49,8 +53,20 @@ gulp.task('test', function (done) {
         });
 });
 
-gulp.task('nodemon', function () {
+gulp.task('nodemon-debug', function () {
     let watchAssets =  ['app.js', '*.js', 'config/**/*.js', 'common_modules/**/*.js']
+
+    return plugins.nodemon({
+        script: 'app.js',
+        nodeArgs: ["--inspect-brk=9410"],
+        ext: 'js,html',
+        verbose: true,
+        watch: watchAssets
+    });
+});
+
+gulp.task('nodemon', function () {
+    let watchAssets = ['app.js', '*.js', 'config/**/*.js', 'common_modules/**/*.js']
 
     return plugins.nodemon({
         script: 'app.js',
