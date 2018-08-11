@@ -1,5 +1,5 @@
 # Mirror Trading Bot
-MirrorBot is a Stellar mirror trading bot for following trades made by a specified Stellar account. It's nicely complements other social trading services by allowing you to automatically follow top traders without giving up your private key.
+MirrorBot is a bot for mirroring trades in real time made by a specified Stellar account. It's nicely complements other social trading services by allowing you to automatically follow top traders without giving up your private key.
 
 # Configuration
 Default configuration is stored `config/env/default.js`. Create `config/env/development.js` to override configuration specific to dev environment, and `config/env/production.js` for production environment.
