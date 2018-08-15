@@ -43,7 +43,7 @@ Default configuration is stored `config/env/default.js`. Create `config/env/deve
 `gulp prod`
 
 # Installation
-*git submodule init .*
+*git submodule init*
 
 *git submodule update --remote*
 
