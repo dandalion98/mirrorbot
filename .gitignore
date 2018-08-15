@@ -74,6 +74,3 @@ local.properties
 *.iml
 
 .aws_config
-
-development.js
-production.js
